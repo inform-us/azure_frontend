@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 
 function App() {
-  const [data, setData] = useState([]);
+  const [data, setData] = useState({ message: "No data" });
   const [content, setContent] = useState("");
 
   const handlePost = async () => {
@@ -59,9 +59,7 @@ function App() {
       <div>
         <h3>Data from Backend:</h3>
         <ul>
-          {data.map((item) => (
-            <li key={item._id}>{item.content}</li>
-          ))}
+          {data.message}
         </ul>
       </div>
     </div>
