@@ -14,3 +14,9 @@ Currently, two official plugins are available:
 ## Start the dev server
 
 `npm run dev`
+
+## Connect to backend
+
+Copy the `.env.example` file to `.env` file:
+`cp .env.example .env`
+Set the `VITE_API_URL` to the backend URL.
