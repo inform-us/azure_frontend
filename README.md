@@ -20,3 +20,5 @@ Currently, two official plugins are available:
 Copy the `.env.example` file to `.env` file:
 `cp .env.example .env`
 Set the `VITE_API_URL` to the backend URL.
+
+## Test Azure Deployment on PR
