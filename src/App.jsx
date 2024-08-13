@@ -3,6 +3,8 @@ import React, { useState } from "react";
 function App() {
   const [data, setData] = useState({ message: "No data" });
   const [content, setContent] = useState("");
+  const port = process.env.port || 8080;
+
 
   const handlePost = async () => {
     try {
