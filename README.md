@@ -24,3 +24,4 @@ Set the `VITE_API_URL` to the backend URL.
 ## Test Azure Deployment on PR
 
 Workflow files generated when manually configuring for static web app and azure vm.
+Static web app workflow is added to branch specified automatically.
