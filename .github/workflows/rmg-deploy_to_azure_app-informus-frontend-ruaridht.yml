@@ -58,5 +58,5 @@ jobs:
         with:
           app-name: 'app-informus-frontend-ruaridht'
           slot-name: 'Production'
-          package: .
+          package: ./dist
           publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_11B75595D5F54380A842AE20D339D700 }}
