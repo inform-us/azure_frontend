@@ -22,3 +22,5 @@ Copy the `.env.example` file to `.env` file:
 Set the `VITE_API_URL` to the backend URL.
 
 ## Test Azure Deployment on PR
+
+Workflow files generated when manually configuring for static web app and azure vm.
