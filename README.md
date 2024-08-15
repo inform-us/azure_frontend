@@ -26,3 +26,4 @@ Set the `VITE_API_URL` to the backend URL.
 Workflow files generated when manually configuring for static web app and azure vm.
 Static web app workflow is added to branch specified automatically.
 Azure VM has many options including Github Actions, Azure DevOps, and Azure CLI.
+Everytime the infrastructure is spun up, the workflow file is updated with the publish profile.
