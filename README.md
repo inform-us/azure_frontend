@@ -21,9 +21,19 @@ Copy the `.env.example` file to `.env` file:
 `cp .env.example .env`
 Set the `VITE_API_URL` to the backend URL.
 
-## Test Azure Deployment on PR
+## Test Azure Web App Deployment
 
-Workflow files generated when manually configuring for static web app and azure vm.
-Static web app workflow is added to branch specified automatically.
-Azure VM has many options including Github Actions, Azure DevOps, and Azure CLI.
-Everytime the infrastructure is spun up, the workflow file is updated with the publish profile.
+Manual Web App deployment can be performed using the Azure Portal, by
+navigating to the Web App and selecting the 'Deployment > Deployment Center' link
+in the left-hand navigation panel.
+
+For deploying a frontend web app via `Static Web App`, you can manually create a `Static Web App` in the Azure Portal
+with the `Source` set to `GitHub` and fill in the details for your frontend GitHub repository.
+Under the `Build Details` section, the `Build Presets` should be detected as `React`, the `App location` can be left
+as the default `/` and the `Output location` should be set to `./dist`.
+This will automatically create a `GitHub Actions` workflow which will be added to branch specified.
+This workflow will then build and deploy the frontend on a `push` or `pull request` event to the specified branch.
+
+For deploying a frontend web app via a terraform provisioned `azurerm_linux_web_app` i.e. Linux VM see
+[Informus-on-Azure README](https://github.com/UCLH-DHCT/Informus-on-Azure) which generates the
+[workflow in this repo.](/Users/ruaridhgollifer/repos/github.com/UCLH-INFORMus/azure_frontend/.github/workflows/rmg-deploy_to_azure_app-informus-frontend-ruaridht.yml)
