@@ -19,7 +19,8 @@ Currently, two official plugins are available:
 
 Copy the `.env.example` file to `.env` file:
 `cp .env.example .env`
-Set the `VITE_API_URL` to the backend URL.
+Set the `VITE_API_URL` to the backend URL with the port specified to the port exposed when starting up the backend
+backend.
 
 ## Test Azure Web App Deployment
 
