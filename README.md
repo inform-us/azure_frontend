@@ -35,6 +35,13 @@ as the default `/` and the `Output location` should be set to `./dist`.
 This will automatically create a `GitHub Actions` workflow which will be added to branch specified.
 This workflow will then build and deploy the frontend on a `push` or `pull request` event to the specified branch.
 
-For deploying a frontend web app via a terraform provisioned `azurerm_linux_web_app` i.e. Linux VM see
-[Informus-on-Azure README](https://github.com/UCLH-DHCT/Informus-on-Azure) which generates the
-[workflow in this repo.](/Users/ruaridhgollifer/repos/github.com/UCLH-INFORMus/azure_frontend/.github/workflows/rmg-deploy_to_azure_app-informus-frontend-ruaridht.yml)
+For more automated approaches, to deploying a frontend web app either
+via a terraform provisioned `azurerm_linux_web_app` i.e. Linux VM or through
+a Static Web App (terraform and/or az cli) then see [a more detailed
+comparison of the approaches.](https://github.com/UCLH-DHCT/Informus-on-Azure/tree/9-simple-web-app-on-local?tab=readme-ov-file#comparing-frontend-deployment-approaches)
+
+> [!NOTE]
+> Remember to `git pull` regularly since workflows are often automatically
+> generated and added to the remote GitHub repository if a branch without
+> branch protection is specified in the set-up.
+> Otherwise, a PR will be needed to add in each generated workflow.
