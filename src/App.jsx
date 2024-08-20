@@ -7,7 +7,7 @@ function App() {
   console.log("API URL:", apiUrl);
 
   const apiUrl_pro = process.env.VITE_APP_BACKEND_URL;
-  console.log("API URL PRO:", apiUrl);
+  console.log("API URL PRO:", apiUrl_pro);
 
   const handlePost = async () => {
     try {
