@@ -34,9 +34,6 @@ function App() {
       const response = await fetch(
         `${apiUrl}/api/data`
       );
-      // const response = await fetch(
-      //   import.meta.env.VITE_APP_BACKEND_URL + "/data"
-      // );
       if (!response.ok) {
         throw new Error("Network response was not ok");
       }
