@@ -3,6 +3,7 @@ import React, { useState } from "react";
 function App() {
   const [data, setData] = useState({ message: "No data" });
   const [content, setContent] = useState("");
+  const apiUrl = process.env.BACKEND_API_URL;
 
   const handlePost = async () => {
     try {
@@ -30,7 +31,7 @@ function App() {
   const handleGet = async () => {
     try {
       const response = await fetch(
-        `${process.env.BACKEND_API_URL}/api/data`
+        `${apiUrl}/api/data`
       );
       // const response = await fetch(
       //   import.meta.env.VITE_APP_BACKEND_URL + "/data"
