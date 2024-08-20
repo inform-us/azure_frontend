@@ -15,23 +15,23 @@ jobs:
     runs-on: ubuntu-latest
     name: Build and Deploy Job
     # Define environment variables
-    env:
-      VITE_APP_BACKEND_URL: https://app-informus-backend-ruaridht.azurewebsites.net
     steps:
       - uses: actions/checkout@v3
         with:
           submodules: true
           lfs: false
-      # - name: Set up Node.js
-      #   uses: actions/setup-node@v3
-      #   with:
-      #     node-version: '20'
+      - name: Set up Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '20'
 
-      # - name: Install dependencies
-      #   run: npm install
+      - name: Install dependencies
+        run: npm install
 
-      # - name: Build
-      #   run: npm run build
+      - name: Build and deploy React app
+        run: |
+          echo "VITE_APP_BACKEND_URL=https://app-informus-backend-ruaridht.azurewebsites.net" >> .env
+          npm run build
 
       - name: Build And Deploy
         id: builddeploy
