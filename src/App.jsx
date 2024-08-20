@@ -30,8 +30,11 @@ function App() {
   const handleGet = async () => {
     try {
       const response = await fetch(
-        import.meta.env.VITE_APP_BACKEND_URL + "/data"
+        `${process.env.BACKEND_API_URL}/api/data`
       );
+      // const response = await fetch(
+      //   import.meta.env.VITE_APP_BACKEND_URL + "/data"
+      // );
       if (!response.ok) {
         throw new Error("Network response was not ok");
       }
