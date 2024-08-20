@@ -6,6 +6,9 @@ function App() {
   const apiUrl = import.meta.env.VITE_APP_BACKEND_URL;
   console.log("API URL:", apiUrl);
 
+  const apiUrl_pro = process.env.VITE_APP_BACKEND_URL;
+  console.log("API URL PRO:", apiUrl);
+
   const handlePost = async () => {
     try {
       const response = await fetch(
