@@ -3,7 +3,7 @@ import React, { useState } from "react";
 function App() {
   const [data, setData] = useState({ message: "No data" });
   const [content, setContent] = useState("");
-  const apiUrl = process.env.VITE_APP_BACKEND_URL;
+  const apiUrl = import.meta.env.VITE_APP_BACKEND_URL;
   console.log("API URL:", apiUrl);
 
   const handlePost = async () => {
