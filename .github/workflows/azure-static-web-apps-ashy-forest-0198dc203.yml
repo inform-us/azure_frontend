@@ -19,16 +19,15 @@ jobs:
         with:
           submodules: true
           lfs: false
-      - name: Set up Node.js
-        uses: actions/setup-node@v3
+      - name: Build 
+        uses: Bash@3
         with:
-          node-version: '20'
-
-      - name: Install dependencies
-        run: npm install
-
-      - name: Build
-        run: npm run build
+          targetType: 'inline'
+          script: |        
+            npm install 
+            npm run build
+        env:
+          VITE_APP_BACKEND_URL: https://app-informus-backend-ruaridht.azurewebsites.net
 
       - name: Build And Deploy
         # id: builddeploy
