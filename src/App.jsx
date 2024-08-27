@@ -3,6 +3,8 @@ import React, { useState } from "react";
 function App() {
   const [data, setData] = useState({ message: "No data" });
   const [content, setContent] = useState("");
+  const apiUrl = import.meta.env.VITE_APP_BACKEND_URL;
+  console.log("API URL:", apiUrl);
 
   const handlePost = async () => {
     try {
@@ -30,7 +32,7 @@ function App() {
   const handleGet = async () => {
     try {
       const response = await fetch(
-        import.meta.env.VITE_APP_BACKEND_URL + "/data"
+        `${apiUrl}/api/data`
       );
       if (!response.ok) {
         throw new Error("Network response was not ok");
