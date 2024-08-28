@@ -3,11 +3,11 @@ name: Azure Static Web Apps CI/CD
 on:
   push:
     branches:
-      - rmg/deploy_to_Azure
+      - rmg/clean_up_old_wf_secrets
   pull_request:
     types: [opened, synchronize, reopened, closed]
     branches:
-      - rmg/deploy_to_Azure
+      - rmg/clean_up_old_wf_secrets
 
 jobs:
   build_and_deploy_job:
